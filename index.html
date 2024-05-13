@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSAs Web</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+  }
+  nav.active {
+    display: block; /* Se muestra cuando tiene la clase active */
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav ul li {
+    margin-bottom: 5px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  nav a:hover {
+    background-color: #555;
+  }
+  .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="dsa_logo.png" alt="DSA Logo">
+  </header>
+  
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Puntos de Emergencia</a></li>
+      <li><a href="#">Configuración</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li> 
+    </ul>
+  </nav>
+
+  <!-- Contenido de la página -->
+  <p>¡Bienvenido a la página de DSAs!</p>
+
+  <script>
+    // Función para alternar la clase 'active' en el menú
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+
+    // Agregar un evento de clic al header para mostrar/ocultar el menú
+    document.querySelector("header").addEventListener("click", toggleMenu);
+  </script>
+</body>
+</html>

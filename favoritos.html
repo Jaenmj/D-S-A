@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favoritos</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  .dropdown {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+  }
+  .dropdown.active {
+    display: block;
+  }
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .dropdown ul li {
+    margin-bottom: 5px;
+  }
+  .dropdown a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  .dropdown a:hover {
+    background-color: #555;
+  }
+  .toggle-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="dsa_logo.png" alt="DSA Logo">
+  </header>
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#">Puntos de Emergencia</a></li>
+      <li><a href="#">Configuración</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li> 
+    </ul>
+  </nav>
+  
+  <!-- Botones y desplegables -->
+  <div class="dropdown-container">
+    <button class="toggle-btn" onclick="toggleDropdown('dropdown1')">Toggle Desplegable 1</button>
+    <div class="dropdown" id="dropdown1">
+      <ul>
+        <li><a href="#">Punto de Interés 1</a></li>
+        <li><a href="#">Punto de Interés 2</a></li>
+        <li><a href="#">Punto de Interés 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dropdown-container">
+    <button class="toggle-btn" onclick="toggleDropdown('dropdown2')">Toggle Desplegable 2</button>
+    <div class="dropdown" id="dropdown2">
+      <ul>
+        <li><a href="#">Punto de Interés 1</a></li>
+        <li><a href="#">Punto de Interés 2</a></li>
+        <li><a href="#">Punto de Interés 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dropdown-container">
+    <button class="toggle-btn" onclick="toggleDropdown('dropdown3')">Toggle Desplegable 3</button>
+    <div class="dropdown" id="dropdown3">
+      <ul>
+        <li><a href="#">Punto de Interés 1</a></li>
+        <li><a href="#">Punto de Interés 2</a></li>
+        <li><a href="#">Punto de Interés 3</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(dropdownId) {
+      var dropdown = document.getElementById(dropdownId);
+      dropdown.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
